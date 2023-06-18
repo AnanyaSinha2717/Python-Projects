@@ -93,3 +93,5 @@ else:
         print("you won")
     elif x==2:
         print("tie")
+
+a=input("press enter to close")
