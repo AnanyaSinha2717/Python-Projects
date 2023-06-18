@@ -24,3 +24,5 @@ elif ls>=40 and ls<=50:
     print(f"Your score is {ls}%, you go alright together.")
 else:
     print(f"Your score is {ls}% ...pffft")
+
+a=input("press Enter to close")

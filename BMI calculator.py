@@ -13,3 +13,4 @@ elif 30<bmi<=35:
     print("obese")
 else :
     print("extremely obese")
+a=input("press Enter to close")

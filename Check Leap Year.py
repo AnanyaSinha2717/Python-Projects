@@ -9,3 +9,5 @@ if y%4==0 and y%100==0:
         print("not a leap")
 elif y%4!=0:
     print("not a leap year")
+
+a=input("press Enter to close")

@@ -12,3 +12,5 @@ selected_row=area[vertical-1]
 selected_row[horizontal-1]="X"
 
 print(f"{r1}\n{r2}\n{r3}")
+
+a=input("press Enter to close")

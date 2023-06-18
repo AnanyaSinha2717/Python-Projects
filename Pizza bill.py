@@ -45,3 +45,5 @@ elif s=='l':
         print(f"your bill is {bill}")
     else:
         print(f"your bill {bill}")
+
+a=input("press Enter to close")
