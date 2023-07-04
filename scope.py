@@ -4,3 +4,5 @@ def potion():
     print(enemies)
 potion()
 print(enemies)
+
+a=input("Press ENTER to close.")

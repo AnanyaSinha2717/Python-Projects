@@ -1,9 +1,8 @@
 enemies=1
 def game():
-    print("Enemies inside function: {enemies}")
+    print(f"Enemies inside function: {enemies}")
     return enemies + 1
 enemies=game()
-print("Enemies outside fcn: {enemies}")
+print(f"Enemies outside fcn: {enemies}")
 
-
-    
+a=input("press ENTER to close")

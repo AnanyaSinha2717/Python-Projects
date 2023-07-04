@@ -6,3 +6,5 @@ def power():
 
 power()
 print(potion)
+
+a=input("press Enter to close")
