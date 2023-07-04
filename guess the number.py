@@ -21,7 +21,6 @@ ask='y'
 while ask=='y':        
     print("\n...I am thinking of a number between 1 to 100...")
     num=random.randint(1,100)
-    ans=print(f"answer is {num}")
     lev=input("\nPick a mode - Type 'easy' or 'hard': ")
     if lev=='easy':
         print("You have 10 moves to guess the correct number.")
