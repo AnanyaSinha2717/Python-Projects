@@ -1,3 +1,5 @@
+#initial
+
 from coffee_data import MENU
 from coffee_data import resources
 def money():
