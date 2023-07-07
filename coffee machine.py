@@ -45,11 +45,11 @@ def order(ask):
         if resources[i]>=MENU[ask]['ingredients'][i]:
             resources[i]=resources[i]-MENU[ask]['ingredients'][i]
             print(f"{i}={resources[i]}")
-            money(ask)
-            
-        elif resources[i]<MENU[ask]['ingredients'][i]:
-            print(f"Sorry, not enough {i}.")
-            return False
+        money(ask)
+def suff()           
+    if resources[i]<MENU[ask]['ingredients'][i]:
+        print(f"Sorry, not enough {i}.")
+        return False
     return True
         
             
