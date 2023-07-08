@@ -51,7 +51,7 @@ def suff(ask):
             
 on=True
 while on:
-    ask=input("What do you wanna order? ('latte', 'espresso', 'cappuccino')").lower()
+    ask=input("What do you wanna order? ('latte', 'espresso', 'cappuccino') ").lower()
     if ask=='report':
         print(f"water = {resources['water']}")
         print(f"milk = {resources['milk']}")
