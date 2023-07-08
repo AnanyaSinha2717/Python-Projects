@@ -40,7 +40,7 @@ def money(ask):
 def order(ask):
     for i in MENU[ask]['ingredients']:
         resources[i]=resources[i]-MENU[ask]['ingredients'][i]
-        print(f"{i}={resources[i]}")
+        print(f"{i}={resources[i]}")#line will be removed later
         
 def suff(ask):
     for i in MENU[ask]['ingredients']:
