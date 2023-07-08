@@ -47,7 +47,7 @@ def suff(ask):
                 if resources[i]<MENU[ask]['ingredients'][i]:
                     print(f"Sorry, there's not enough {i}.") 
     return False
-        
+    return True   
             
 on=True
 while on:
