@@ -1,2 +1,5 @@
-from turtle import Turtle
+from turtle import Turtle,Screen
 t=Turtle()
+print(t)
+my=Screen()
+print(my.canvheight)
