@@ -16,8 +16,9 @@ resources = {
 print("WELCOME TO THE CAFE")
 
 #money
+profit=0
 def money(ask):
-    profit=0
+    global profit
     t=int(input("How many quarters?: "))*0.25
     t+=int(input("How many dimes?: "))*0.10
     t+=int(input("How many nickels?: "))*0.05
