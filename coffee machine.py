@@ -1,4 +1,4 @@
-#initial
+#final
 
 MENU = {"espresso": {"ingredients": {"water": 50, "coffee": 18,},"cost": 1.5,},
         
@@ -41,7 +41,6 @@ def money(ask):
 def order(ask):
     for i in MENU[ask]['ingredients']:
         resources[i]=resources[i]-MENU[ask]['ingredients'][i]
-        print(f"{i}={resources[i]}")#line will be removed later
         
 def suff(ask):
     global on
@@ -70,8 +69,4 @@ while on:
             else:
                 order(ask)
                 print(f"Here is your {ask} ☕. Enjoy!")
-
-
-
-
     
