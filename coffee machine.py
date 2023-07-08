@@ -28,42 +28,46 @@ def money(ask):
         change=t-MENU[ask]['cost']
         print(f"Here is ${round(change,2)} in change.")
         profit+=MENU[ask]['cost']
-        print(f"Here is your {ask} ☕. Enjoy!")
         
     elif t==MENU[ask]['cost']:
         profit+=MENU[ask]['cost'] 
-        print(f"Here is your {ask} ☕. Enjoy!")
         
     elif t<MENU[ask]['cost']:
         print(f"Sorry, that's not enough money. Money refunded.")
         return False
-    return True
  
 #order
 def order(ask):
     for i in MENU[ask]['ingredients']:
-        if resources[i]>=MENU[ask]['ingredients'][i]:
-            resources[i]=resources[i]-MENU[ask]['ingredients'][i]
-            print(f"{i}={resources[i]}")
-        money(ask)
-def suff()           
-    if resources[i]<MENU[ask]['ingredients'][i]:
-        print(f"Sorry, not enough {i}.")
-        return False
-    return True
+        resources[i]=resources[i]-MENU[ask]['ingredients'][i]
+        print(f"{i}={resources[i]}")
+        
+def suff(ask):
+    for i in MENU[ask]['ingredients']:
+                if resources[i]<MENU[ask]['ingredients'][i]:
+                    print(f"Sorry, there's not enough {i}.") 
+    return False
         
             
 on=True
 while on:
     ask=input("What do you wanna order? ('latte', 'espresso', 'cappuccino')").lower()
     if ask=='report':
-        print(f"water = {resources[water]}")
-        print(f"milk = {resources[milk]}")
-        print(f"coffee = {resources[coffee]}")
+        print(f"water = {resources['water']}")
+        print(f"milk = {resources['milk']}")
+        print(f"coffee = {resources['coffee']}")
     elif ask=='off':
         on=False
     else:
-        order(ask)
+        if suff(ask):
+            on=True
+        else:
+            if money(ask)==False:
+                on=True
+            else:
+                order(ask)
+                print(f"Here is your {ask} ☕. Enjoy!")
+
 
 
 
