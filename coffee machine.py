@@ -44,9 +44,11 @@ def order(ask):
         print(f"{i}={resources[i]}")#line will be removed later
         
 def suff(ask):
+    global on
     for i in MENU[ask]['ingredients']:
                 if resources[i]<MENU[ask]['ingredients'][i]:
                     print(f"Sorry, there's not enough {i}.") 
+                    on = False
     return False
     return True   
             
@@ -62,7 +64,7 @@ while on:
     else:
         if suff(ask):
             on=True
-        else:
+        elif on:
             if money(ask)==False:
                 on=True
             else:
