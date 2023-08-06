@@ -17,6 +17,7 @@ import random
 tmod.colormode(255)
 t = tmod.Turtle()
 screen = tmod.Screen()
+t.speed(10)
 
 color_list = [(198, 12, 32), (250, 237, 17), (39, 76, 189), (38, 217, 68), (238, 227, 5),
               (229, 159, 46), (27, 40, 157),
@@ -26,13 +27,17 @@ color_list = [(198, 12, 32), (250, 237, 17), (39, 76, 189), (38, 217, 68), (238,
               (74, 213, 167),
               (77, 234, 202), (52, 234, 243), (3, 67, 40)]
 
-t.penup()
-t.goto(-200,-200)
-for i in range(9):
-    t.pendown()
-    t.dot(20, random.choice(color_list))
+
+b = -200
+for x in range(9):
     t.penup()
-    t.fd(50)
+    t.goto(-200, b)
+    b+=50
+    for i in range(9):
+        t.pendown()
+        t.dot(25, random.choice(color_list))
+        t.penup()
+        t.fd(50)
 
 
 screen.exitonclick()
