@@ -5,10 +5,10 @@ class Food(Turtle):
 
     def __init__(self):
         super().__init__()
-        self.shape("turtle")
+        self.shape("circle")
         self.pu()
-        self.shapesize(stretch_len=0.8, stretch_wid=0.8)
-        self.color("green")
+        self.shapesize(stretch_len=0.5, stretch_wid=0.5)
+        self.color("blue")
         self.speed('fastest')
         self.refresh()
 

@@ -11,4 +11,4 @@ def prime_checker(number):
 n=int(input("Enter the number you want to check: "))
 prime_checker(number=n)
 
-a=input("press Enter to continue.")
+a=input("press Enter to close.")
