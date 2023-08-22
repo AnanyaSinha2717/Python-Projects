@@ -8,7 +8,7 @@ while end==False:
           (_____)
           (_____)
           (____)
-    ---.__(___)⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ---.__(___)
     '''
     paper='''
         _______
@@ -26,9 +26,9 @@ while end==False:
           (____)
     ---.__(___)
     '''
-    if q==1:
+    if q=='1':
         print(f"You chose: rock {rock}")
-    elif q==2:
+    elif q=='2':
         print(f"You chose: paper {paper}")
     else:
         print(f"You chose: scissors {scissors}")
@@ -41,14 +41,14 @@ while end==False:
     elif x==2:
         print(f"Computer chose: scissors {scissors}")
 
-    if q==1:
+    if q=='1':
         if x==0:
             print("Tie\n")
         elif x==1:
             print("You lost\n")
         elif x==2:
             print("You won\n")
-    elif q==2:
+    elif q=='2':
         if x==0:
             print("You won\n")
         elif x==1:
