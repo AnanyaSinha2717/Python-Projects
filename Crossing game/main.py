@@ -24,10 +24,13 @@ while game_is_on:
 
     if player.ycor() == 270:
         score.level()
+        # cars.inc_speed()
+        # cars.move()
 
     #collision with car
-    elif player.distance(cars) < 28:
-        score.game_over()
-        game_is_on = False
+    for car in cars.all_cars:
+        if car.distance(player) < 20:
+            score.game_over()
+            game_is_on = False
 
 screen.exitonclick()

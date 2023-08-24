@@ -10,7 +10,7 @@ class Player(Turtle):
         super().__init__()
         self.shape('turtle')
         self.pu()
-        self.goto(0, -FINISH_LINE_Y)
+        self.goto(STARTING_POSITION)
         self.seth(90)
 
     def move(self):
