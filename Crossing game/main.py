@@ -22,14 +22,14 @@ while game_is_on:
     cars.generate()
     cars.move()
 
-    if player.ycor() == 270:
-        score.level()
-        # cars.inc_speed()
-        # cars.move()
+    if player.success() == True:
+        player.go_to_start()
+        score.level_up()
+        cars.inc_speed()
 
-    #collision with car
+    # collision with car
     for car in cars.all_cars:
-        if car.distance(player) < 20:
+        if car.distance(player) < 25:
             score.game_over()
             game_is_on = False
 
