@@ -1,13 +1,14 @@
 from turtle import Turtle
 
 
-POS = [(0,0), (-20,0), (-40,0)]
+POS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DIS = 20
+
 
 class Snake:
 
-    def __init__(self) :
-        self.snake=[]
+    def __init__(self):
+        self.snake = []
         self.createsnake()
 
     def createsnake(self):
@@ -15,11 +16,17 @@ class Snake:
             self.add_snake(position)
 
     def add_snake(self, position):
-        t=Turtle('square')
+        t = Turtle('square')
         t.color('brown')
         t.pu()
         t.goto(position)
         self.snake.append(t)
+
+    def reset_snake(self):
+        for seg in self.snake:
+            seg.goto(1000, 1000)
+        self.snake.clear()
+        self.createsnake()
 
     def extend(self):
         self.add_snake(self.snake[-1].position())
