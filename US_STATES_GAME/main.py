@@ -23,17 +23,25 @@ answer_list = []
 
 
 data = pandas.read_csv("50_states.csv")
-state_name = data.state.to_list()
+states_list = data.state.to_list()
 
 
 while score < 50:
     answer_input = screen.textinput(
         title=f"{score}/50", prompt="Enter the name of a state").title()
-    if answer_input in answer_list:
+
+    if answer_input == "Exit":
+        missing_states = []
+        for state in states_list:
+            if state not in answer_list:
+                missing_states.append(state)
+        break
+
+    elif answer_input in answer_list:
         score += 0
 
     else:
-        if answer_input in state_name:
+        if answer_input in states_list:
             answer_list.append(answer_input)
             t = turtle.Turtle()
             score += 1
@@ -43,10 +51,9 @@ while score < 50:
             t.goto(int(state_data.x), int(state_data.y))
             t.write(answer_input)
 
-        else:
-            score += 0
 
-turtle.write("YOU WIN !!", align="center", font=("Arial", 16, "bold"))
-
-
-screen.exitonclick()
+# statestolearn.csv
+for data[data.state[0]] in not answer_list:
+    list.append(data[data.state[0]])
+    data = pandas.DataFrame(list)
+    data.to_csv("States_to_learn.csv")
