@@ -47,4 +47,6 @@ while score < 50:
             score += 0
 
 turtle.write("YOU WIN !!", align="center", font=("Arial", 16, "bold"))
+
+
 screen.exitonclick()
