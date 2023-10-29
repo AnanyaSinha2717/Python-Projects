@@ -1,4 +1,4 @@
-from turtle import Screen
+from turtle import Screen, Turtle
 import time
 from snake import Snake
 from food import Food
@@ -10,6 +10,19 @@ screen.bgcolor('black')
 screen.title('Feed the Snake')
 screen.tracer(0)
 
+# screen boundary
+bound = Turtle()
+bound.ht()
+bound.pensize(20)
+bound.pu()
+bound.color('silver')
+bound.goto(-280, 280)
+bound.pd()
+for j in range(4):
+    bound.fd(560)
+    bound.right(90)
+
+# calling classes
 snake = Snake()
 food = Food()
 score = Score()
@@ -33,7 +46,7 @@ while game_on:
         score.score_calc()
 
     # detect collision with wall
-    if snake.snake[0].xcor() > 280 or snake.snake[0].xcor() < -280 or snake.snake[0].ycor() > 280 or snake.snake[0].ycor() < -280:
+    if snake.snake[0].xcor() > 270 or snake.snake[0].xcor() < -270 or snake.snake[0].ycor() > 270 or snake.snake[0].ycor() < -270:
         score.reset_board()
         snake.reset_snake()
 

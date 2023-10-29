@@ -17,7 +17,7 @@ class Snake:
 
     def add_snake(self, position):
         t = Turtle('square')
-        t.color('brown')
+        t.color('dark green')
         t.pu()
         t.goto(position)
         self.snake.append(t)
