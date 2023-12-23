@@ -31,10 +31,7 @@ while score < 50:
         title=f"{score}/50", prompt="Enter the name of a state").title()
 
     if answer_input == "Exit":
-        missing_states = []
-        for state in states_list:
-            if state not in answer_list:
-                missing_states.append(state)
+        missing_states = [state for state in states_list if state not in answer_list]
         break
 
     elif answer_input in answer_list:
